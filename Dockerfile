@@ -2,4 +2,5 @@ FROM almalinux:9
 RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/index.html
 COPY E-commerce/ /usr/share/nginx/html/index.html
+READ chmod 644 /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
